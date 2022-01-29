@@ -17,6 +17,41 @@ code {
 }
 
 .bodytext {
-  width: 700px;
   margin-bottom: 10px;
+}
+
+@media (min-width:320px) {
+  .bodytext {
+      width: 250px;
+  }
+}
+
+@media (min-width: 400px) {
+  .bodytext {
+      width: 320px;
+  }
+}
+
+@media (min-width: 500px) {
+  .bodytext {
+      width: 380px;
+  }
+}
+
+@media (min-width:801px) {
+  .bodytext {
+      width: 550px;
+  }
+}
+
+@media (min-width:1025px) {
+  .bodytext {
+      width: 700px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .bodytext {
+      width: 750px;
+  }
 }
