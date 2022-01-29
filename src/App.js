@@ -6,7 +6,8 @@ function App() {
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [htmlText, setHtmlText] = useState(null);
-  const [IsChapterMenuOpen, setIsChapterMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [focus, setFocus] = useState(false);
 
   useEffect(() => {
     let html = '';
@@ -72,21 +73,39 @@ function App() {
 
   let handleOnChangeBookOptions = (obj) => {
     setSelectedBook(obj.label);
-    setIsChapterMenuOpen(true);
+    setFocus(true);
   }
 
   let handleOnChangeChapterOptions = (obj) => {
     setSelectedChapter(obj.value);
-    setIsChapterMenuOpen(false);
+    setFocus(false);
+  }
+
+  let changeMode = () => {
+    let html = document.querySelector('html');
+
+    html.style.backgroundColor === 'black' ? html.style.backgroundColor = 'white' : html.style.backgroundColor = 'black';
+    html.style.color === 'white' ? html.style.color = 'black' : html.style.color = 'white';
+
+    setIsDark(!isDark);
   }
 
   return (
-    <div className="App">
+    <div>
       <p className="text-3xl text-red-600 flex justify-center items-center mt-2 mb-5" id="errorText"></p>
 
       <div className="flex flex-row justify-center items-center mb-6">
-        <CustomSelect options={bookOptions} defaultValue={{ label: 'Select Book', value: 'selectBook' }} styles={{ width: '200px' }} onChangeFunc={handleOnChangeBookOptions}/>
-        {selectedBook && <CustomSelect options={returnObjectOptions(chapterOptionsFinder(selectedBook))} defaultValue={{ label: 1, value: 1 }} styles={{ width: '100px', marginLeft: '15px' }} onChangeFunc={handleOnChangeChapterOptions} menuOnOrOff={IsChapterMenuOpen} />}
+        <CustomSelect options={bookOptions} defaultValue={{ label: 'Select Book', value: 'selectBook' }} styles={{ width: '200px', color: 'black' }} onChangeFunc={handleOnChangeBookOptions}/>
+        {selectedBook && <span onClick={() => setFocus(focus ? false : true)}><CustomSelect options={returnObjectOptions(chapterOptionsFinder(selectedBook))} defaultValue={{ label: 1, value: 1 }} styles={{ width: '100px', marginLeft: '15px', color: 'black' }} onChangeFunc={handleOnChangeChapterOptions} focus={focus} /></span>}
+        <span onClick={changeMode} className="bg-blue-300 w-10 h-10 flex items-center justify-center rounded-full ml-5">
+          {isDark ? 
+          (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+          )
+          }
+        </span>
       </div>
 
       <p id="chapterTitle" className="flex justify-center items-center text-3xl font-serif mb-3"></p>
