@@ -20,9 +20,22 @@ code {
   margin-bottom: 10px;
 }
 
+.poetry {
+  margin-bottom: 10px;
+}
+
+.psasuper {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
 @media (min-width:320px) {
   .bodytext {
       width: 250px;
+  }
+
+  .poetry {
+    width: 250px;
   }
 }
 
@@ -30,11 +43,19 @@ code {
   .bodytext {
       width: 320px;
   }
+
+  .poetry {
+    width: 320px;
+  }
 }
 
 @media (min-width: 500px) {
   .bodytext {
       width: 380px;
+  }
+
+  .poetry {
+    width: 380px;
   }
 }
 
@@ -42,16 +63,50 @@ code {
   .bodytext {
       width: 550px;
   }
+
+  .poetry {
+    width: 550px;
+  }
 }
 
 @media (min-width:1025px) {
   .bodytext {
       width: 700px;
   }
+
+  .poetry {
+    width: 700px;
+  }
+
+  #previousChapSpan {
+    -webkit-transition: margin 0.2s ease-out;
+    -moz-transition: margin 0.2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+    transition: margin 0.2s ease-out;
+  }
+
+  #previousChapSpan:hover {
+    margin-top: -10px;
+  }
+
+  #nextChapSpan {
+    -webkit-transition: margin 0.2s ease-out;
+    -moz-transition: margin 0.2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+    transition: margin 0.2s ease-out;
+  }
+
+  #nextChapSpan:hover {
+    margin-top: -10px;
+  }
 }
 
 @media (min-width: 1281px) {
   .bodytext {
       width: 750px;
+  }
+
+  .poetry {
+    width: 750px;
   }
 }
