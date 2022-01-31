@@ -37,6 +37,10 @@ code {
   .poetry {
     width: 250px;
   }
+  
+  .psasuper {
+     width: 250px;
+  }
 }
 
 @media (min-width: 400px) {
@@ -45,6 +49,10 @@ code {
   }
 
   .poetry {
+    width: 320px;
+  }
+  
+  .psasuper {
     width: 320px;
   }
 }
@@ -57,6 +65,10 @@ code {
   .poetry {
     width: 380px;
   }
+  
+  .psasuper {
+    width: 380px;
+  }
 }
 
 @media (min-width:801px) {
@@ -67,6 +79,10 @@ code {
   .poetry {
     width: 550px;
   }
+  
+  .psasuper {
+    width: 550px;
+  }
 }
 
 @media (min-width:1025px) {
@@ -75,6 +91,10 @@ code {
   }
 
   .poetry {
+    width: 700px;
+  }
+  
+  .psasuper {
     width: 700px;
   }
 
@@ -107,6 +127,10 @@ code {
   }
 
   .poetry {
+    width: 750px;
+  }
+  
+  .psasuper {
     width: 750px;
   }
 }
