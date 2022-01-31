@@ -24,7 +24,7 @@ const Footer = () => {
 
 			<div className='credit-div mt-5 sm:mt-0'>
 				<p className='text-xl font-semibold'>Built and maintained by <span><a href='https://github.com/david-p-george'>David George</a></span></p>
-				<p className='text-lg font-light w-[400px]'>If you encounter any bugs or have any suggestions, contact me at off.davidgeorge@gmail.com.</p>
+				<p className='text-lg font-light w-[401px]'>If you encounter any bugs or have any suggestions, contact me at off.davidgeorge@gmail.com.</p>
 			</div>
 
 			<div className='mt-8 sm:mt-0 pb-8 sm:pt-0'>
