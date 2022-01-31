@@ -110,3 +110,20 @@ code {
     width: 750px;
   }
 }
+
+.credit-div span {
+  background-image: linear-gradient(120deg, rgb(147, 197, 253), rgb(147, 197, 253) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 100%;
+  transition: background-size 0.25s ease-in;
+}
+
+.credit-div span:hover {
+  background-size: 100% 88% !important;
+}
+
+#header-image {
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
