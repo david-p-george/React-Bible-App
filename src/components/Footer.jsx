@@ -5,7 +5,7 @@ import { FaReact } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className='h-[500px] lg:h-[200px] flex flex-col lg:flex-row justify-around items-center mt-10 pt-[40px] lg:pt-0 border-t-4'>
+    <div className='h-[500px] lg:h-[200px] flex flex-col lg:flex-row justify-around items-center mt-16 pt-[80px] lg:pt-0 border-t-4'>
 			<div className='flex flex-col'>
 				<p className='text-lg font-semibold'>Powered By</p>
 				<a href="https://reactjs.org/">
