@@ -29,6 +29,28 @@ code {
   margin-bottom: 10px;
 }
 
+@media (max-width: 360px) {
+  #ul-container {
+    padding-left: 10px;
+  }
+
+  #multi-p-container {
+    padding-left: 10px;
+  }
+
+  .bodytext {
+    width: 250px;
+}
+
+  .poetry {
+    width: 250px;
+  }
+
+  .psasuper {
+    width: 250px;
+  }
+}
+
 @media (min-width:320px) {
   .bodytext {
       width: 250px;
