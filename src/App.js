@@ -21,6 +21,8 @@ function App() {
       .then((json) => {json.map((obj) => (obj.text.includes('<p') === true ? html += obj.text.slice(0, 20) + `<sup><b>${obj.verse}</b></sup> ` + obj.text.slice(20) : html += `<sup><b>${obj.verse}</b></sup> ${obj.text}`))})
       .then(() => setHtmlText(html))
       .then(() => document.querySelector('#chapterTitle').textContent = 'John 1')
+      .then(() => setSelectedBook('john'))
+      .then(() => setSelectedChapter(1))
   }, []);
   
 
@@ -106,7 +108,7 @@ function App() {
       console.log(' ');
     } else if (selectedChapter === 1) {
       setSelectedBook(getBookDetails(selectedBook).previousBook);
-      setSelectedChapter(chapterOptionsFinder(selectedBook));
+      setSelectedChapter(chapterOptionsFinder(getBookDetails(selectedBook).previousBook));
     } else {
       setSelectedChapter(selectedChapter - 1)
     }
