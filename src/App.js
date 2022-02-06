@@ -4,7 +4,7 @@ import CustomSelect from "./components/CustomSelect";
 import Footer from "./components/Footer";
 
 import { chapterOptionsFinder, bookOptions, getBookDetails } from './utils/data';
-import headerIcon from './assets/servantsofthewordicon1.png'
+import headerIcon from './assets/servantsofthewordicondoc.webp'
 
 function App() {
   const [selectedBook, setSelectedBook] = useState(null);
