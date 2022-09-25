@@ -132,11 +132,11 @@ function App() {
       <p className="text-3xl text-red-600 flex justify-center items-center mt-2 mb-5" id="errorText"></p>
 
       <span className="w-fit fixed h-fit mt-12 sm:mt-0" id="previousChapSpan" onClick={handlePrevChapter}>
-        <svg className="w-12 h-12 sm:w-16 sm:h-16 pl-2 sm:pl-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" /></svg>
+        <svg className="w-12 h-12 sm:w-16 sm:h-16 pl-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" /></svg>
       </span>
 
       <span className="w-fit h-fit fixed right-0 mt-12 sm:mt-0" id="nextChapSpan" onClick={handleNextChapter}>
-        <svg className="w-12 h-12 sm:w-16 sm:h-16 pr-2 sm:pl-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <svg className="w-12 h-12 sm:w-16 sm:h-16 pr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       </span>
 
       <div className="flex flex-row justify-center items-center mb-6">
